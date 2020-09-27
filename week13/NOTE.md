@@ -16,5 +16,7 @@
   - 暂停需要cancel tick，使用cancelAnimationFrame
   - 暂停时记录暂停开始时间，点击重启时记录暂停结束时间，取暂停起始差附加到时间线上重启Tick
 - 完善动画的其他功能
-  - 
+  - animation duration调用处处理delay逻辑，receiveTime入参t需要减去delay，t为负值则未到动画启动时间，完善Animation对象以渲染CSS
+  - 使用progress缓存当前动画时间进度，传入timeFunction变化曲线函数，函数使用JS实现的cubicBezier ease
 - 对时间线进行状态管理
+  - Timeline引入state管理，方法执行限定状态进入，inited --start()--> started --pause()--> paused --resume()--> started --reset()--> inited
