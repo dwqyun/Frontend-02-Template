@@ -12,11 +12,8 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "runtimeArgs": [
-        "--require", "@babel/register"
-      ],
       "args": [],
-      "program": "${workspaceFolder}/node_modules/.bin/mocha"
+      "program": "${workspaceFolder}/publish.js"
     }
   ]
 }
